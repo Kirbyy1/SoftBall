@@ -1,0 +1,1612 @@
+{
+    "team_players": {
+        "uTsNATUNI2ET": [
+            {
+                "id": "06ba3b9c-65d6-4497-b2fa-bdfcc337ae31",
+                "first_name": "Emma",
+                "last_name": "W",
+                "number": "13"
+            },
+            {
+                "id": "0261a7db-504b-49af-86d4-563c223078e7",
+                "first_name": "Allyssa",
+                "last_name": "S",
+                "number": "8"
+            },
+            {
+                "id": "f7550d89-0407-40a0-84a3-81b1596905c3",
+                "first_name": "Allyson",
+                "last_name": "C",
+                "number": "19"
+            },
+            {
+                "id": "22e4fe04-20a0-4ed9-b154-cf75ce2e8f54",
+                "first_name": "Mila",
+                "last_name": "C",
+                "number": "21"
+            },
+            {
+                "id": "66f7850c-c1f4-4f9b-b2b5-8b8ab8660276",
+                "first_name": "Mia",
+                "last_name": "L",
+                "number": "24"
+            },
+            {
+                "id": "62a40367-cecd-4796-8a1d-6c9ca126a294",
+                "first_name": "Harleigh",
+                "last_name": "R",
+                "number": "00"
+            },
+            {
+                "id": "8c7ba74a-d618-450f-9fca-f377b791d5d5",
+                "first_name": "Lola",
+                "last_name": "F",
+                "number": "14"
+            },
+            {
+                "id": "ede3971f-0584-4caf-8826-5f97e1f69532",
+                "first_name": "Olivia",
+                "last_name": "R",
+                "number": "22"
+            },
+            {
+                "id": "d6b67847-a79e-4b93-9df0-84eecb995bd0",
+                "first_name": "Kaylee",
+                "last_name": "M",
+                "number": "5"
+            },
+            {
+                "id": "52b47704-27b4-49ce-9ea3-d5fa484002ed",
+                "first_name": "Adalyn",
+                "last_name": "E",
+                "number": "11"
+            },
+            {
+                "id": "f636e5b8-acb1-4ef1-82a3-c1905cf7dedc",
+                "first_name": "Bella",
+                "last_name": "A",
+                "number": "9"
+            },
+            {
+                "id": "e87371f6-4eb6-4f6d-9c31-43c23097ccee",
+                "first_name": "Aubrey",
+                "last_name": "M",
+                "number": "782"
+            }
+        ],
+        "da0ba3af-ac38-41af-8986-553e8170d2a2": [
+            {
+                "id": "7df1c372-daad-49f4-bc04-986391992a52",
+                "first_name": "",
+                "last_name": "",
+                "number": "22"
+            },
+            {
+                "id": "f9797dfa-ddad-485e-a481-70a10cd93708",
+                "first_name": "",
+                "last_name": "",
+                "number": "28"
+            },
+            {
+                "id": "36b54388-b039-4fdd-833e-cb9dbf1ff8e3",
+                "first_name": "",
+                "last_name": "",
+                "number": "8"
+            },
+            {
+                "id": "728c859c-d429-40e4-8249-2b908507e98d",
+                "first_name": "",
+                "last_name": "",
+                "number": "11"
+            },
+            {
+                "id": "d7d01ee0-0313-4707-8602-43d5e7064653",
+                "first_name": "",
+                "last_name": "",
+                "number": "26"
+            },
+            {
+                "id": "923f918e-27df-4fa0-b7a4-cd0ab54185f7",
+                "first_name": "",
+                "last_name": "",
+                "number": "27"
+            },
+            {
+                "id": "3a285191-1f6c-46b8-b3f0-70a98d15cdb2",
+                "first_name": "",
+                "last_name": "",
+                "number": "24"
+            },
+            {
+                "id": "3149cdcb-00fd-4be6-a52c-0add7447e253",
+                "first_name": "",
+                "last_name": "",
+                "number": "77"
+            },
+            {
+                "id": "85b3c20e-30ec-4b40-bc9d-5aa8d6f6ed69",
+                "first_name": "",
+                "last_name": "",
+                "number": "4"
+            },
+            {
+                "id": "a7e9331e-57f7-4771-973b-ba53eb80b97c",
+                "first_name": "",
+                "last_name": "",
+                "number": "25"
+            },
+            {
+                "id": "f36861a6-3844-428f-bf98-45e6b326371b",
+                "first_name": "",
+                "last_name": "",
+                "number": "0"
+            },
+            {
+                "id": "307f3553-a935-4821-9039-70cee5c497da",
+                "first_name": "",
+                "last_name": "",
+                "number": "2"
+            }
+        ]
+    },
+    "sport": "softball",
+    "plays": [
+        {
+            "order": 0,
+            "inning": 1,
+            "half": "top",
+            "name_template": {
+                "template": "Single"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 0,
+            "did_outs_change": false,
+            "at_plate_details": [
+                {
+                    "template": "Lineup changed: ${0261a7db-504b-49af-86d4-563c223078e7} in at pitcher"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${307f3553-a935-4821-9039-70cee5c497da} singles on a fly ball to right fielder ${62a40367-cecd-4796-8a1d-6c9ca126a294}"
+                }
+            ]
+        },
+        {
+            "order": 1,
+            "inning": 1,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${3149cdcb-00fd-4be6-a52c-0add7447e253} strikes out looking, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                },
+                {
+                    "template": "${307f3553-a935-4821-9039-70cee5c497da} remains at 1st"
+                }
+            ]
+        },
+        {
+            "order": 2,
+            "inning": 1,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${f36861a6-3844-428f-bf98-45e6b326371b} strikes out looking, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                },
+                {
+                    "template": "${307f3553-a935-4821-9039-70cee5c497da} remains at 1st"
+                }
+            ]
+        },
+        {
+            "order": 3,
+            "inning": 1,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "${307f3553-a935-4821-9039-70cee5c497da} steals 2nd"
+                },
+                {
+                    "template": "${307f3553-a935-4821-9039-70cee5c497da} steals 3rd"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Strike 3 swinging"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${7df1c372-daad-49f4-bc04-986391992a52} strikes out swinging, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 4,
+            "inning": 1,
+            "half": "bottom",
+            "name_template": {
+                "template": "Single"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 0,
+            "did_outs_change": false,
+            "at_plate_details": [
+                {
+                    "template": "Lineup changed: ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} in at pitcher"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${0261a7db-504b-49af-86d4-563c223078e7} singles on a line drive to right fielder ${85b3c20e-30ec-4b40-bc9d-5aa8d6f6ed69}"
+                }
+            ]
+        },
+        {
+            "order": 5,
+            "inning": 1,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 swinging"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "${0261a7db-504b-49af-86d4-563c223078e7} steals 2nd"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "${0261a7db-504b-49af-86d4-563c223078e7} steals 3rd"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${22e4fe04-20a0-4ed9-b154-cf75ce2e8f54} strikes out looking, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                },
+                {
+                    "template": "${0261a7db-504b-49af-86d4-563c223078e7} remains at 3rd"
+                }
+            ]
+        },
+        {
+            "order": 6,
+            "inning": 1,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 swinging"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "${0261a7db-504b-49af-86d4-563c223078e7} caught stealing home, catcher"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${62a40367-cecd-4796-8a1d-6c9ca126a294} strikes out looking, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 7,
+            "inning": 2,
+            "half": "top",
+            "name_template": {
+                "template": "Ground Out"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${d7d01ee0-0313-4707-8602-43d5e7064653} grounds out to pitcher ${0261a7db-504b-49af-86d4-563c223078e7}"
+                }
+            ]
+        },
+        {
+            "order": 8,
+            "inning": 2,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${923f918e-27df-4fa0-b7a4-cd0ab54185f7} strikes out looking, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 9,
+            "inning": 2,
+            "half": "top",
+            "name_template": {
+                "template": "Ground Out"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${f9797dfa-ddad-485e-a481-70a10cd93708} grounds out to pitcher ${0261a7db-504b-49af-86d4-563c223078e7}"
+                }
+            ]
+        },
+        {
+            "order": 10,
+            "inning": 2,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Ball 3"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Strike 3 swinging"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${06ba3b9c-65d6-4497-b2fa-bdfcc337ae31} strikes out swinging, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 11,
+            "inning": 2,
+            "half": "bottom",
+            "name_template": {
+                "template": "Walk"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": false,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Ball 3"
+                },
+                {
+                    "template": "Strike 1 swinging"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Ball 4"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${f636e5b8-acb1-4ef1-82a3-c1905cf7dedc} walks, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 12,
+            "inning": 2,
+            "half": "bottom",
+            "name_template": {
+                "template": "Triple"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 swinging"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "${f636e5b8-acb1-4ef1-82a3-c1905cf7dedc} caught stealing 2nd, catcher"
+                },
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${f7550d89-0407-40a0-84a3-81b1596905c3} triples on a fly ball to center fielder ${f9797dfa-ddad-485e-a481-70a10cd93708}"
+                }
+            ]
+        },
+        {
+            "order": 13,
+            "inning": 2,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 1 swinging"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Ball 3"
+                },
+                {
+                    "template": "Strike 3 swinging"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${66f7850c-c1f4-4f9b-b2b5-8b8ab8660276} strikes out swinging, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 14,
+            "inning": 3,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${36b54388-b039-4fdd-833e-cb9dbf1ff8e3} strikes out looking, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 15,
+            "inning": 3,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Ball 3"
+                },
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Strike 3 swinging"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${728c859c-d429-40e4-8249-2b908507e98d} strikes out swinging, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 16,
+            "inning": 3,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 swinging"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${85b3c20e-30ec-4b40-bc9d-5aa8d6f6ed69} strikes out looking, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 17,
+            "inning": 3,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${ede3971f-0584-4caf-8826-5f97e1f69532} strikes out looking, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 18,
+            "inning": 3,
+            "half": "bottom",
+            "name_template": {
+                "template": "Single"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": false,
+            "at_plate_details": [
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${8c7ba74a-d618-450f-9fca-f377b791d5d5} singles on a fly ball to right fielder ${a7e9331e-57f7-4771-973b-ba53eb80b97c}"
+                }
+            ]
+        },
+        {
+            "order": 19,
+            "inning": 3,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "${8c7ba74a-d618-450f-9fca-f377b791d5d5} steals 2nd"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "Strike 3 swinging"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${52b47704-27b4-49ce-9ea3-d5fa484002ed} strikes out swinging, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                },
+                {
+                    "template": "${8c7ba74a-d618-450f-9fca-f377b791d5d5} remains at 2nd"
+                }
+            ]
+        },
+        {
+            "order": 20,
+            "inning": 3,
+            "half": "bottom",
+            "name_template": {
+                "template": "Ground Out"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${0261a7db-504b-49af-86d4-563c223078e7} grounds out to pitcher ${923f918e-27df-4fa0-b7a4-cd0ab54185f7}"
+                }
+            ]
+        },
+        {
+            "order": 21,
+            "inning": 4,
+            "half": "top",
+            "name_template": {
+                "template": "Dropped 3rd Strike"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Strike 3 swinging"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${3a285191-1f6c-46b8-b3f0-70a98d15cdb2} out at first on dropped 3rd strike"
+                }
+            ]
+        },
+        {
+            "order": 22,
+            "inning": 4,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 1 swinging"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "Strike 3 swinging"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${a7e9331e-57f7-4771-973b-ba53eb80b97c} strikes out swinging, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 23,
+            "inning": 4,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 3"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${307f3553-a935-4821-9039-70cee5c497da} strikes out looking, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 24,
+            "inning": 4,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "Strike 3 swinging"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${22e4fe04-20a0-4ed9-b154-cf75ce2e8f54} strikes out swinging, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 25,
+            "inning": 4,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${62a40367-cecd-4796-8a1d-6c9ca126a294} strikes out looking, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 26,
+            "inning": 4,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 3"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${06ba3b9c-65d6-4497-b2fa-bdfcc337ae31} strikes out looking, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 27,
+            "inning": 5,
+            "half": "top",
+            "name_template": {
+                "template": "Fly Out"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${3149cdcb-00fd-4be6-a52c-0add7447e253} flies out to left fielder ${f636e5b8-acb1-4ef1-82a3-c1905cf7dedc}"
+                }
+            ]
+        },
+        {
+            "order": 28,
+            "inning": 5,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Strike 3 swinging"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${f36861a6-3844-428f-bf98-45e6b326371b} strikes out swinging, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 29,
+            "inning": 5,
+            "half": "top",
+            "name_template": {
+                "template": "Fly Out"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${7df1c372-daad-49f4-bc04-986391992a52} flies out to second baseman ${8c7ba74a-d618-450f-9fca-f377b791d5d5}"
+                }
+            ]
+        },
+        {
+            "order": 30,
+            "inning": 5,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${f636e5b8-acb1-4ef1-82a3-c1905cf7dedc} strikes out looking, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 31,
+            "inning": 5,
+            "half": "bottom",
+            "name_template": {
+                "template": "Walk"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": false,
+            "at_plate_details": [
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Ball 3"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "Ball 4"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${f7550d89-0407-40a0-84a3-81b1596905c3} walks, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 32,
+            "inning": 5,
+            "half": "bottom",
+            "name_template": {
+                "template": "Walk"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "${f7550d89-0407-40a0-84a3-81b1596905c3} caught stealing 2nd, catcher"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Ball 3"
+                },
+                {
+                    "template": "Ball 4"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${66f7850c-c1f4-4f9b-b2b5-8b8ab8660276} walks, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 33,
+            "inning": 5,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "${66f7850c-c1f4-4f9b-b2b5-8b8ab8660276} steals 2nd"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "${66f7850c-c1f4-4f9b-b2b5-8b8ab8660276} steals 3rd"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 3"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Strike 3 swinging"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${ede3971f-0584-4caf-8826-5f97e1f69532} strikes out swinging, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 34,
+            "inning": 6,
+            "half": "top",
+            "name_template": {
+                "template": "Hit By Pitch"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 0,
+            "did_outs_change": false,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 swinging"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Ball 2"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${d7d01ee0-0313-4707-8602-43d5e7064653} is hit by pitch, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 35,
+            "inning": 6,
+            "half": "top",
+            "name_template": {
+                "template": "Fielder's Choice"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${923f918e-27df-4fa0-b7a4-cd0ab54185f7} grounds into fielder's choice to shortstop ${f7550d89-0407-40a0-84a3-81b1596905c3}"
+                },
+                {
+                    "template": "${d7d01ee0-0313-4707-8602-43d5e7064653} out advancing to 2nd"
+                }
+            ]
+        },
+        {
+            "order": 36,
+            "inning": 6,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Strike 1 looking"
+                },
+                {
+                    "template": "Strike 2 swinging"
+                },
+                {
+                    "template": "${923f918e-27df-4fa0-b7a4-cd0ab54185f7} steals 2nd"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${f9797dfa-ddad-485e-a481-70a10cd93708} strikes out looking, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                },
+                {
+                    "template": "${923f918e-27df-4fa0-b7a4-cd0ab54185f7} remains at 2nd"
+                }
+            ]
+        },
+        {
+            "order": 37,
+            "inning": 6,
+            "half": "top",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Strike 3 swinging"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${36b54388-b039-4fdd-833e-cb9dbf1ff8e3} strikes out swinging, ${0261a7db-504b-49af-86d4-563c223078e7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 38,
+            "inning": 6,
+            "half": "bottom",
+            "name_template": {
+                "template": "Fly Out"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${8c7ba74a-d618-450f-9fca-f377b791d5d5} flies out to pitcher ${923f918e-27df-4fa0-b7a4-cd0ab54185f7}"
+                }
+            ]
+        },
+        {
+            "order": 39,
+            "inning": 6,
+            "half": "bottom",
+            "name_template": {
+                "template": "Walk"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 1,
+            "did_outs_change": false,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Ball 3"
+                },
+                {
+                    "template": "Strike 1 swinging"
+                },
+                {
+                    "template": "Ball 4"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${52b47704-27b4-49ce-9ea3-d5fa484002ed} walks, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                }
+            ]
+        },
+        {
+            "order": 40,
+            "inning": 6,
+            "half": "bottom",
+            "name_template": {
+                "template": "Strikeout"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Strike 1 swinging"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Strike 3 looking"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${0261a7db-504b-49af-86d4-563c223078e7} strikes out looking, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                },
+                {
+                    "template": "${52b47704-27b4-49ce-9ea3-d5fa484002ed} remains at 1st"
+                }
+            ]
+        },
+        {
+            "order": 41,
+            "inning": 6,
+            "half": "bottom",
+            "name_template": {
+                "template": "Walk"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 2,
+            "did_outs_change": false,
+            "at_plate_details": [
+                {
+                    "template": "${52b47704-27b4-49ce-9ea3-d5fa484002ed} steals 2nd"
+                },
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "Ball 2"
+                },
+                {
+                    "template": "Strike 2 looking"
+                },
+                {
+                    "template": "Ball 3"
+                },
+                {
+                    "template": "Ball 4"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${22e4fe04-20a0-4ed9-b154-cf75ce2e8f54} walks, ${923f918e-27df-4fa0-b7a4-cd0ab54185f7} pitching"
+                },
+                {
+                    "template": "${52b47704-27b4-49ce-9ea3-d5fa484002ed} remains at 2nd"
+                }
+            ]
+        },
+        {
+            "order": 42,
+            "inning": 6,
+            "half": "bottom",
+            "name_template": {
+                "template": "Ground Out"
+            },
+            "home_score": 0,
+            "away_score": 0,
+            "did_score_change": false,
+            "outs": 3,
+            "did_outs_change": true,
+            "at_plate_details": [
+                {
+                    "template": "Ball 1"
+                },
+                {
+                    "template": "Foul"
+                },
+                {
+                    "template": "In play"
+                }
+            ],
+            "final_details": [
+                {
+                    "template": "${62a40367-cecd-4796-8a1d-6c9ca126a294} grounds out to catcher"
+                }
+            ]
+        }
+    ]
+}

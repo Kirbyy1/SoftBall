@@ -15,7 +15,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def process_game_stats(json_files, output_file):
+def process_game_stats(json_files, output_file, include_opponent=False):
     logger.info(f"Starting processing for {len(json_files)} JSON files to {output_file}")
     player_stats = defaultdict(lambda: {
         'singles': 0, 'doubles': 0, 'triples_plus': 0,
@@ -23,9 +23,10 @@ def process_game_stats(json_files, output_file):
         'pa': 0, 'so_k': 0, 'so_swing': 0, 'bb': 0,
         'first_name': '', 'last_name': '', 'number': '',
         'position': '',
-        # Add fielding position stats including LC and RC
+        # Fielding position stats including LC and RC
         'P': 0, 'C': 0, 'SS': 0, '1B': 0, '2B': 0, '3B': 0,
-        'LF': 0, 'CF': 0, 'RF': 0, 'LC': 0, 'RC': 0, 'OF': 0  # Added LC and RC
+        'LF': 0, 'CF': 0, 'RF': 0, 'LC': 0, 'RC': 0, 'OF': 0,
+        'opponents': set()  # For storing opponent info if needed
     })
 
     for json_file in json_files:
@@ -37,25 +38,31 @@ def process_game_stats(json_files, output_file):
             logger.error(f"Failed to load {json_file}: {str(e)}")
             return f"Error loading {json_file}: {str(e)}"
 
+        # Get opponent if the option is enabled
+        opponent = None
+        if include_opponent:
+            opponent = data.get("opponent", None)
+
         player_lookup = {}
 
-        # Extract player information
-        for team_id, players in data['team_players'].items():
+        # Extract player information using .get() to avoid missing key errors
+        for team_id, players in data.get('team_players', {}).items():
             for player in players:
                 player_lookup[player['id']] = {
-                    'first_name': player['first_name'],
-                    'last_name': player['last_name'],
-                    'number': player['number']
+                    'first_name': player.get('first_name', ''),
+                    'last_name': player.get('last_name', ''),
+                    'number': player.get('number', '')
                 }
 
-        for play in data['plays']:
-            play_type = play['name_template']['template'].lower()
-            final_details = play['final_details']
+        for play in data.get('plays', []):
+            play_type = play.get('name_template', {}).get('template', '').lower()
+            final_details = play.get('final_details', [])
 
             batter_id = None
             for detail in final_details:
-                if '${' in detail['template']:
-                    batter_id = detail['template'].split('${')[1].split('}')[0]
+                template_text = detail.get('template', '')
+                if '${' in template_text:
+                    batter_id = template_text.split('${')[1].split('}')[0]
                     break
 
             if batter_id and batter_id in player_lookup:
@@ -65,12 +72,15 @@ def process_game_stats(json_files, output_file):
                 stats['number'] = player_lookup[batter_id]['number']
                 stats['pa'] += 1
 
-                # Extract information about which position fielded the ball
+                if include_opponent and opponent:
+                    stats['opponents'].add(opponent)
+
+                # Extract fielding position info
                 fielding_position = None
                 detail_text = ""
 
                 if final_details and len(final_details) > 0:
-                    detail_text = final_details[0]['template'].lower()
+                    detail_text = final_details[0].get('template', '').lower()
 
                     # Check for position mentions in the play description
                     position_keywords = {
@@ -95,7 +105,7 @@ def process_game_stats(json_files, output_file):
                             fielding_position = pos
                             break
 
-                    # If no direct position found, look for descriptions
+                    # If no direct position is found, search for keywords
                     if not fielding_position:
                         for keyword, pos in position_keywords.items():
                             if keyword in detail_text:
@@ -111,7 +121,6 @@ def process_game_stats(json_files, output_file):
                     elif 'bunt' in detail_text:
                         stats['bunts'] += 1
 
-                    # If we found a fielding position and this is a single, increment the position counter
                     if fielding_position:
                         stats[fielding_position] += 1
                 elif 'double' in play_type and 'double play' not in play_type:
@@ -137,12 +146,14 @@ def process_game_stats(json_files, output_file):
     excel_data = []
     for player_id, stats in player_stats.items():
         if stats['pa'] > 0:
-            # Create a full player name without the number
-            player_name = f"{stats['first_name']} {stats['last_name'][0]}"
+            # Build a full player name while handling a missing last name
+            first = stats['first_name']
+            last_initial = stats['last_name'][0] if stats['last_name'] else ''
+            player_name = f"{first} {last_initial}".strip()
 
-            excel_data.append({
-                'Player Name': player_name,  # Separate name column
-                'Number': stats['number'],  # Separate number column
+            row = {
+                'Player Name': player_name,
+                'Number': stats['number'],
                 'Plate Appearances (PA)': stats['pa'],
                 'Singles': stats['singles'],
                 'Doubles': stats['doubles'],
@@ -153,7 +164,6 @@ def process_game_stats(json_files, output_file):
                 'Strikeouts Looking (SO K)': stats['so_k'],
                 'Strikeouts Swinging (SO ꓘ)': stats['so_swing'],
                 'Walks (BB)': stats['bb'],
-                # Add position hit stats including LC and RC
                 'P': stats['P'],
                 'C': stats['C'],
                 'SS': stats['SS'],
@@ -166,7 +176,13 @@ def process_game_stats(json_files, output_file):
                 'LC': stats['LC'],
                 'RC': stats['RC'],
                 'OF': stats['OF']
-            })
+            }
+
+            if include_opponent:
+                opponents = sorted(stats['opponents'])
+                row['Opponent'] = ", ".join(opponents) if opponents else ''
+
+            excel_data.append(row)
 
     if excel_data:
         df = pd.DataFrame(excel_data)
@@ -223,7 +239,7 @@ class JsonProcessorApp:
             row=0, column=1, padx=5
         )
 
-        # Output filename section
+        # Output filename and options section
         self.output_frame = ttk.LabelFrame(self.main_frame, text="Output Settings", padding="10")
         self.output_frame.grid(row=4, column=0, columnspan=3, pady=10, sticky=(tk.W, tk.E))
 
@@ -232,6 +248,12 @@ class JsonProcessorApp:
         self.output_entry.grid(row=0, column=1, pady=5, padx=5)
         self.output_entry.insert(0, "player_statistics.xlsx")
         ttk.Label(self.output_frame, text=".xlsx will be added if omitted").grid(row=0, column=2, sticky=tk.W)
+
+        # New: Checkbox for including opponent information in the output
+        self.include_opponent = tk.BooleanVar(value=False)
+        ttk.Checkbutton(self.output_frame, text="Include Opponent in output", variable=self.include_opponent).grid(
+            row=1, column=0, columnspan=3, sticky=tk.W, pady=5
+        )
 
         # Process button
         self.process_button = ttk.Button(self.main_frame, text="Process Files", command=self.process_files, width=20)
@@ -292,7 +314,7 @@ class JsonProcessorApp:
         self.status_bar.config(text="Processing...")
         self.root.update()
 
-        result = process_game_stats(self.json_files, output_file)
+        result = process_game_stats(self.json_files, output_file, include_opponent=self.include_opponent.get())
 
         self.process_button.config(state='normal')
         if result:
