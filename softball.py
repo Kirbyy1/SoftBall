@@ -21,7 +21,11 @@ def process_game_stats(json_files, output_file):
         'singles': 0, 'doubles': 0, 'triples_plus': 0,
         'grounders': 0, 'fly_balls': 0, 'bunts': 0,
         'pa': 0, 'so_k': 0, 'so_swing': 0, 'bb': 0,
-        'first_name': '', 'last_name': '', 'number': ''
+        'first_name': '', 'last_name': '', 'number': '',
+        'position': '',
+        # Add fielding position stats
+        'P': 0, 'C': 0, 'SS': 0, '1B': 0, '2B': 0, '3B': 0,
+        'LF': 0, 'CF': 0, 'RF': 0, 'OF': 0  # OF for generic outfield
     })
 
     for json_file in json_files:
@@ -34,6 +38,8 @@ def process_game_stats(json_files, output_file):
             return f"Error loading {json_file}: {str(e)}"
 
         player_lookup = {}
+
+        # Extract player information
         for team_id, players in data['team_players'].items():
             for player in players:
                 player_lookup[player['id']] = {
@@ -59,18 +65,55 @@ def process_game_stats(json_files, output_file):
                 stats['number'] = player_lookup[batter_id]['number']
                 stats['pa'] += 1
 
+                # Extract information about which position fielded the ball
+                fielding_position = None
+                detail_text = ""
+
+                if final_details and len(final_details) > 0:
+                    detail_text = final_details[0]['template'].lower()
+
+                    # Check for position mentions in the play description
+                    position_keywords = {
+                        'pitcher': 'P', 'pitching': 'P', 'mound': 'P',
+                        'catcher': 'C', 'behind the plate': 'C',
+                        'shortstop': 'SS',
+                        'first base': '1B', '1st base': '1B',
+                        'second base': '2B', '2nd base': '2B',
+                        'third base': '3B', '3rd base': '3B',
+                        'left field': 'LF', 'left fielder': 'LF',
+                        'center field': 'CF', 'center fielder': 'CF',
+                        'right field': 'RF', 'right fielder': 'RF',
+                        'outfield': 'OF', 'outfielder': 'OF'
+                    }
+
+                    # Direct position mentions like "to SS"
+                    direct_positions = ['P', 'C', 'SS', '1B', '2B', '3B', 'LF', 'CF', 'RF']
+                    for pos in direct_positions:
+                        if f" to {pos}" in detail_text or f" to the {pos}" in detail_text:
+                            fielding_position = pos
+                            break
+
+                    # If no direct position found, look for descriptions
+                    if not fielding_position:
+                        for keyword, pos in position_keywords.items():
+                            if keyword in detail_text:
+                                fielding_position = pos
+                                break
+
                 if 'single' in play_type:
                     stats['singles'] += 1
-                    detail_text = final_details[0]['template'].lower()
                     if 'ground' in detail_text:
                         stats['grounders'] += 1
                     elif 'fly' in detail_text:
                         stats['fly_balls'] += 1
                     elif 'bunt' in detail_text:
                         stats['bunts'] += 1
+
+                    # If we found a fielding position and this is a single, increment the position counter
+                    if fielding_position:
+                        stats[fielding_position] += 1
                 elif 'double' in play_type and 'double play' not in play_type:
                     stats['doubles'] += 1
-                    detail_text = final_details[0]['template'].lower()
                     if 'ground' in detail_text:
                         stats['grounders'] += 1
                     elif 'fly' in detail_text:
@@ -78,7 +121,6 @@ def process_game_stats(json_files, output_file):
                 elif 'triple' in play_type:
                     stats['triples_plus'] += 1
                 elif 'strikeout' in play_type:
-                    detail_text = final_details[0]['template'].lower()
                     if 'looking' in detail_text:
                         stats['so_k'] += 1
                     elif 'swinging' in detail_text:
@@ -105,7 +147,18 @@ def process_game_stats(json_files, output_file):
                 'Bunts': stats['bunts'],
                 'Strikeouts Looking (SO K)': stats['so_k'],
                 'Strikeouts Swinging (SO ꓘ)': stats['so_swing'],
-                'Walks (BB)': stats['bb']
+                'Walks (BB)': stats['bb'],
+                # Add position hit stats
+                'P': stats['P'],
+                'C': stats['C'],
+                'SS': stats['SS'],
+                '1B': stats['1B'],
+                '2B': stats['2B'],
+                '3B': stats['3B'],
+                'LF': stats['LF'],
+                'CF': stats['CF'],
+                'RF': stats['RF'],
+                'OF': stats['OF']
             })
 
     if excel_data:
