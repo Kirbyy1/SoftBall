@@ -1,0 +1,12 @@
+2025-03-10 22:24:36,552 - INFO - Starting processing for 4 JSON files to player_statistics_new.xlsx
+2025-03-10 22:24:36,554 - INFO - Successfully loaded C:/Users/Alekkum/PycharmProjects/SoftBall/dummy data/uTsNATUNI2ETRawData.json
+2025-03-10 22:24:36,555 - INFO - Successfully loaded C:/Users/Alekkum/PycharmProjects/SoftBall/dummy data/uTsNATUNI2ETRawData_1.json
+2025-03-10 22:24:36,555 - INFO - Successfully loaded C:/Users/Alekkum/PycharmProjects/SoftBall/dummy data/uTsNATUNI2ETRawData_2.json
+2025-03-10 22:24:36,556 - INFO - Successfully loaded C:/Users/Alekkum/PycharmProjects/SoftBall/dummy data/uTsNATUNI2ETRawData_3.json
+2025-03-10 22:24:36,711 - INFO - Successfully saved statistics to player_statistics_new.xlsx
+2025-03-10 22:25:32,753 - INFO - Starting processing for 4 JSON files to player_statistics_no_opponent.xlsx
+2025-03-10 22:25:32,754 - INFO - Successfully loaded C:/Users/Alekkum/PycharmProjects/SoftBall/dummy data/uTsNATUNI2ETRawData.json
+2025-03-10 22:25:32,755 - INFO - Successfully loaded C:/Users/Alekkum/PycharmProjects/SoftBall/dummy data/uTsNATUNI2ETRawData_1.json
+2025-03-10 22:25:32,755 - INFO - Successfully loaded C:/Users/Alekkum/PycharmProjects/SoftBall/dummy data/uTsNATUNI2ETRawData_2.json
+2025-03-10 22:25:32,756 - INFO - Successfully loaded C:/Users/Alekkum/PycharmProjects/SoftBall/dummy data/uTsNATUNI2ETRawData_3.json
+2025-03-10 22:25:33,033 - INFO - Successfully saved statistics to player_statistics_no_opponent.xlsx
