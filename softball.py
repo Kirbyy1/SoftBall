@@ -4,9 +4,19 @@ import pandas as pd
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 import os
+import logging
+
+# Configure logging
+logging.basicConfig(
+    filename='game_stats_processor.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 
 def process_game_stats(json_files, output_file):
+    logger.info(f"Starting processing for {len(json_files)} JSON files to {output_file}")
     player_stats = defaultdict(lambda: {
         'singles': 0, 'doubles': 0, 'triples_plus': 0,
         'grounders': 0, 'fly_balls': 0, 'bunts': 0,
@@ -18,9 +28,10 @@ def process_game_stats(json_files, output_file):
         try:
             with open(json_file, 'r') as f:
                 data = json.load(f)
+            logger.info(f"Successfully loaded {json_file}")
         except Exception as e:
-            messagebox.showerror("Error", f"Failed to load {json_file}: {str(e)}")
-            return None
+            logger.error(f"Failed to load {json_file}: {str(e)}")
+            return f"Error loading {json_file}: {str(e)}"
 
         player_lookup = {}
         for team_id, players in data['team_players'].items():
@@ -106,14 +117,16 @@ def process_game_stats(json_files, output_file):
                 for column in worksheet.columns:
                     max_length = max(len(str(cell.value)) for cell in column if cell.value) + 2
                     worksheet.column_dimensions[column[0].column_letter].width = max_length
+            logger.info(f"Successfully saved statistics to {output_file}")
             return f"Statistics successfully saved to '{output_file}'"
         except Exception as e:
+            logger.error(f"Failed to save to Excel: {str(e)}")
             return f"Error saving to Excel: {str(e)}"
     else:
+        logger.warning("No player statistics to save (no plate appearances found)")
         return "No player statistics to save (no plate appearances found)"
 
 
-# Tkinter GUI with improved layout
 class JsonProcessorApp:
     def __init__(self, root):
         self.root = root
@@ -143,7 +156,7 @@ class JsonProcessorApp:
         self.button_frame = ttk.Frame(self.main_frame)
         self.button_frame.grid(row=3, column=0, columnspan=3, pady=10)
 
-        ttk.Button(self.button_frame, text="Add JSON File", command=self.add_file, width=15).grid(
+        ttk.Button(self.button_frame, text="Add JSON Files", command=self.add_files, width=15).grid(
             row=0, column=0, padx=5
         )
         ttk.Button(self.button_frame, text="Remove Selected", command=self.remove_file, width=15).grid(
@@ -173,20 +186,27 @@ class JsonProcessorApp:
         self.root.columnconfigure(0, weight=1)
         self.root.rowconfigure(0, weight=1)
 
-    def add_file(self):
-        file_path = filedialog.askopenfilename(filetypes=[("JSON files", "*.json")])
-        if file_path and file_path not in self.json_files:
-            self.json_files.append(file_path)
-            self.file_listbox.insert(tk.END, os.path.basename(file_path))
-            self.update_status()
+        logger.info("Application started")
+
+    def add_files(self):
+        file_paths = filedialog.askopenfilenames(filetypes=[("JSON files", "*.json")])
+        if file_paths:
+            new_files = [fp for fp in file_paths if fp not in self.json_files]
+            if new_files:
+                self.json_files.extend(new_files)
+                for file_path in new_files:
+                    self.file_listbox.insert(tk.END, os.path.basename(file_path))
+                    logger.info(f"Added file: {file_path}")
+                self.update_status()
 
     def remove_file(self):
         selection = self.file_listbox.curselection()
         if selection:
             index = selection[0]
+            removed_file = self.json_files.pop(index)
             self.file_listbox.delete(index)
-            self.json_files.pop(index)
             self.update_status()
+            logger.info(f"Removed file: {removed_file}")
 
     def update_status(self):
         if self.json_files:
@@ -197,22 +217,24 @@ class JsonProcessorApp:
     def process_files(self):
         if not self.json_files:
             messagebox.showwarning("Warning", "Please add at least one JSON file.")
+            logger.warning("Process attempted with no files added")
             return
 
         output_file = self.output_entry.get().strip()
         if not output_file:
             messagebox.showwarning("Warning", "Please enter an output filename.")
+            logger.warning("Process attempted with no output filename")
             return
         if not output_file.endswith('.xlsx'):
             output_file += '.xlsx'
 
-        self.process_button.config(state='disabled')  # Disable button during processing
+        self.process_button.config(state='disabled')
         self.status_bar.config(text="Processing...")
         self.root.update()
 
         result = process_game_stats(self.json_files, output_file)
 
-        self.process_button.config(state='normal')  # Re-enable button
+        self.process_button.config(state='normal')
         if result:
             self.status_bar.config(text=result)
             if "successfully" in result:
@@ -221,8 +243,8 @@ class JsonProcessorApp:
                 messagebox.showerror("Error", result)
 
 
-# Run the GUI
 if __name__ == "__main__":
     root = tk.Tk()
     app = JsonProcessorApp(root)
     root.mainloop()
+    logger.info("Application closed")
