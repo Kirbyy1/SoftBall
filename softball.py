@@ -23,9 +23,9 @@ def process_game_stats(json_files, output_file):
         'pa': 0, 'so_k': 0, 'so_swing': 0, 'bb': 0,
         'first_name': '', 'last_name': '', 'number': '',
         'position': '',
-        # Add fielding position stats
+        # Add fielding position stats including LC and RC
         'P': 0, 'C': 0, 'SS': 0, '1B': 0, '2B': 0, '3B': 0,
-        'LF': 0, 'CF': 0, 'RF': 0, 'OF': 0  # OF for generic outfield
+        'LF': 0, 'CF': 0, 'RF': 0, 'LC': 0, 'RC': 0, 'OF': 0  # Added LC and RC
     })
 
     for json_file in json_files:
@@ -83,11 +83,13 @@ def process_game_stats(json_files, output_file):
                         'left field': 'LF', 'left fielder': 'LF',
                         'center field': 'CF', 'center fielder': 'CF',
                         'right field': 'RF', 'right fielder': 'RF',
+                        'left center': 'LC', 'left-center': 'LC', 'left center field': 'LC',
+                        'right center': 'RC', 'right-center': 'RC', 'right center field': 'RC',
                         'outfield': 'OF', 'outfielder': 'OF'
                     }
 
                     # Direct position mentions like "to SS"
-                    direct_positions = ['P', 'C', 'SS', '1B', '2B', '3B', 'LF', 'CF', 'RF']
+                    direct_positions = ['P', 'C', 'SS', '1B', '2B', '3B', 'LF', 'CF', 'RF', 'LC', 'RC']
                     for pos in direct_positions:
                         if f" to {pos}" in detail_text or f" to the {pos}" in detail_text:
                             fielding_position = pos
@@ -148,7 +150,7 @@ def process_game_stats(json_files, output_file):
                 'Strikeouts Looking (SO K)': stats['so_k'],
                 'Strikeouts Swinging (SO ꓘ)': stats['so_swing'],
                 'Walks (BB)': stats['bb'],
-                # Add position hit stats
+                # Add position hit stats including LC and RC
                 'P': stats['P'],
                 'C': stats['C'],
                 'SS': stats['SS'],
@@ -158,6 +160,8 @@ def process_game_stats(json_files, output_file):
                 'LF': stats['LF'],
                 'CF': stats['CF'],
                 'RF': stats['RF'],
+                'LC': stats['LC'],
+                'RC': stats['RC'],
                 'OF': stats['OF']
             })
 
