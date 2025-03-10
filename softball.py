@@ -137,9 +137,12 @@ def process_game_stats(json_files, output_file):
     excel_data = []
     for player_id, stats in player_stats.items():
         if stats['pa'] > 0:
-            player_name = f"{stats['first_name']} {stats['last_name'][0]} ({stats['number']})"
+            # Create a full player name without the number
+            player_name = f"{stats['first_name']} {stats['last_name'][0]}"
+
             excel_data.append({
-                'Player (Number)': player_name,
+                'Player Name': player_name,  # Separate name column
+                'Number': stats['number'],  # Separate number column
                 'Plate Appearances (PA)': stats['pa'],
                 'Singles': stats['singles'],
                 'Doubles': stats['doubles'],
